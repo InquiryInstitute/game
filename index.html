@@ -3,15 +3,195 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inquiry Cup — game.inquiry.institute</title>
+  <title>The Game — Inquiry Cup | game.inquiry.institute</title>
+  <meta name="description" content="The Game — Inquiry Cup. Philosophy on the pitch. In the spirit of the great intellectual games. Presented during World Cup. Inquiry Institute.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
   <style>
-    body { font-family: system-ui, sans-serif; margin: 2rem; text-align: center; }
-    img { max-width: 100%; height: auto; }
+    :root {
+      --bg: #0d120d;
+      --surface: #161d16;
+      --pitch: #1a2f1a;
+      --accent: #8bc34a;
+      --gold: #d4a84b;
+      --text: #e8ebe8;
+      --muted: #8a9a8a;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "DM Sans", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; }
+    header {
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--pitch);
+    }
+    .logo {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 1.25rem;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      text-transform: uppercase;
+    }
+    .hero {
+      padding: 3rem 0 4rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(3rem, 10vw, 5rem);
+      letter-spacing: 0.02em;
+      margin: 0 0 0.5rem;
+      color: var(--text);
+      line-height: 1;
+    }
+    .hero .tagline {
+      font-size: 1.25rem;
+      color: var(--muted);
+      margin: 0 0 0.75rem;
+      max-width: 28ch;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero .worldcup {
+      display: inline-block;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 0 0 2rem;
+      padding: 0.4rem 1rem;
+      border: 2px solid var(--gold);
+      border-radius: 4px;
+    }
+    .screenshot {
+      display: block;
+      width: 100%;
+      max-width: 720px;
+      height: auto;
+      margin: 0 auto 2rem;
+      border-radius: 8px;
+      border: 3px solid var(--pitch);
+      box-shadow: 0 24px 48px rgba(0,0,0,0.5);
+    }
+    .cta {
+      display: inline-block;
+      padding: 0.85rem 2rem;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 1.25rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--bg);
+      background: var(--accent);
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .cta:hover { background: #9ccc69; transform: translateY(-2px); }
+    .section {
+      padding: 3rem 0;
+      border-top: 1px solid var(--pitch);
+    }
+    .section h2 {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 1.75rem;
+      letter-spacing: 0.05em;
+      color: var(--gold);
+      margin: 0 0 1.5rem;
+    }
+    .features {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    .feature {
+      background: var(--surface);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid var(--pitch);
+    }
+    .feature strong { color: var(--accent); }
+    .feature p { margin: 0.5rem 0 0; color: var(--muted); font-size: 0.95rem; }
+    .tradition {
+      background: var(--surface);
+      padding: 2rem;
+      border-radius: 8px;
+      border: 1px solid var(--pitch);
+      margin-top: 2rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+    .tradition strong { color: var(--gold); }
+    .tradition a { color: var(--accent); text-decoration: none; }
+    .tradition a:hover { text-decoration: underline; }
+    footer {
+      padding: 2rem 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--pitch);
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
-  <h1>Inquiry Cup</h1>
-  <p><a href="game.png"><img src="game.png" alt="Inquiry Cup" /></a></p>
-  <p>game.inquiry.institute</p>
+  <header>
+    <div class="wrap">
+      <span class="logo">Inquiry Institute</span> <a href="play.html" style="margin-left:1rem; color:var(--muted); font-size:0.9rem; text-decoration:none;">Play</a>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <h1>The Game</h1>
+        <p class="tagline">Philosophy’s greatest minds on the pitch. In the spirit of the great intellectual games.</p>
+        <p class="worldcup">Presented during World Cup</p>
+        <img src="game.png" alt="Inquiry Cup — NAT vs LOG in the stadium" class="screenshot" width="720" height="405">
+        <a href="play.html" class="cta">Enter the grounds</a>
+      </div>
+    </section>
+    <section class="section" id="play">
+      <div class="wrap">
+        <h2>What is the Inquiry Cup?</h2>
+        <div class="features">
+          <div class="feature">
+            <strong>NAT vs LOG</strong>
+            <p>Naturalists and logicians face off in a pixel-art football match. Confucius in goal, Kant on the wing — the teams you never knew you needed.</p>
+          </div>
+          <div class="feature">
+            <strong>Stadium spectacle</strong>
+            <p>Full stadium, commentators, and referees. Every match feels like the biggest game in philosophy.</p>
+          </div>
+          <div class="feature">
+            <strong>From Inquiry Institute</strong>
+            <p>Part of the Inquiry Institute universe. Think deep, play hard.</p>
+          </div>
+          <div class="feature">
+            <strong>World Cup</strong>
+            <p>We’re presenting The Game during World Cup. The beautiful game meets the life of the mind — when the world watches football, we invite you to watch philosophy play.</p>
+          </div>
+        </div>
+        <div class="tradition">
+          <strong>Tradition</strong> — The idea of a “game” that weaves together philosophy, culture, and play has a long history. Hermann Hesse’s novel <em>Das Glasperlenspiel</em> (The Glass Bead Game) imagined an intellectual game uniting music, mathematics, and the life of the mind. We don’t adapt that work; we share its spirit: inquiry as play, thought as spectacle. The Inquiry Cup is our pitch for that tradition.
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap">
+      <p><a href="https://inquiry.institute">Inquiry Institute</a> — game.inquiry.institute</p>
+    </div>
+  </footer>
 </body>
 </html>

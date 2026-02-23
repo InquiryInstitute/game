@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Play — The Game | grounds.inquiry.institute</title>
+  <meta name="description" content="Play The Game in our virtual grounds. WorkAdventure at grounds.inquiry.institute — coming soon. Inquiry Institute.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d120d;
+      --surface: #161d16;
+      --pitch: #1a2f1a;
+      --accent: #8bc34a;
+      --gold: #d4a84b;
+      --text: #e8ebe8;
+      --muted: #8a9a8a;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      font-family: "DM Sans", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+    }
+    .bar {
+      flex: 0 0 auto;
+      padding: 0.6rem 1rem;
+      background: var(--surface);
+      border-bottom: 1px solid var(--pitch);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .bar a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .bar a:hover { text-decoration: underline; }
+    .bar .logo {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+    }
+    .bar .links { display: flex; gap: 1rem; }
+    .embed-wrap {
+      flex: 1 1 auto;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .embed-wrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .coming {
+      text-align: center;
+      max-width: 28rem;
+    }
+    .coming h1 {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 1.75rem;
+      letter-spacing: 0.05em;
+      color: var(--gold);
+      margin: 0 0 0.75rem;
+    }
+    .coming p { color: var(--muted); margin: 0 0 1rem; }
+    .coming .note {
+      font-size: 0.85rem;
+      color: var(--pitch);
+      margin-top: 1.5rem;
+    }
+    .coming code { background: var(--surface); padding: 0.2em 0.4em; border-radius: 3px; font-size: 0.9em; }
+  </style>
+</head>
+<body>
+  <nav class="bar">
+    <a href="index.html" class="logo">← The Game</a>
+    <span class="links">
+      <a href="index.html">Back to home</a>
+    </span>
+  </nav>
+  <div class="embed-wrap">
+    <div class="coming">
+      <h1>Grounds — coming soon</h1>
+      <p>Our WorkAdventure space at <strong>grounds.inquiry.institute</strong> doesn’t exist yet. When it’s live, this page will embed it so you can join the game room from here.</p>
+      <p><a href="index.html" style="color: var(--accent);">Back to The Game</a></p>
+      <p class="note">To enable the embed later: set the iframe <code>src</code> in play.html to your WorkAdventure URL (e.g. https://grounds.inquiry.institute/ or your game room path).</p>
+    </div>
+  </div>
+</body>
+</html>
