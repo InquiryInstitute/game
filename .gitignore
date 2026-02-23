@@ -1,0 +1,9 @@
+# OS
+.DS_Store
+.whisper
+
+# Editor
+.idea
+.vscode
+*.swp
+*.swo
